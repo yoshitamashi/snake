@@ -163,7 +163,7 @@ function handleTouchStart(evt) {
 };                                                
                                                                          
 function handleTouchMove(evt) {
-    if (isGameover) {start()}
+    if (!isRunning) {start()}
     if ( ! xDown || ! yDown ) {
         return;
     }
