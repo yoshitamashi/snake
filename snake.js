@@ -109,16 +109,16 @@ function gameloop(){
 function handleKeyboardMove(e) {
     switch (e.key) {
         case 'ArrowUp' :
-            moveUp()
-            break
-        case 'ArrowDown' :
             moveDown()
             break
+        case 'ArrowDown' :
+            moveUp()
+            break
         case 'ArrowLeft' :
-            moveLeft()
+            moveRight()
             break
         case 'ArrowRight' :
-            moveRight()
+            moveLeft()
             break
     }
 }
