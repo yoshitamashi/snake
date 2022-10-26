@@ -109,16 +109,16 @@ function gameloop(){
 function handleKeyboardMove(e) {
     switch (e.key) {
         case 'ArrowUp' :
-            moveDown()
-            break
-        case 'ArrowDown' :
             moveUp()
             break
+        case 'ArrowDown' :
+            moveDown()
+            break
         case 'ArrowLeft' :
-            moveRight()
+            moveLeft()
             break
         case 'ArrowRight' :
-            moveLeft()
+            moveRight()
             break
     }
 }
@@ -177,18 +177,18 @@ function handleTouchMove(evt) {
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
         if ( xDiff > 0 ) {
             /* right swipe */ 
-            moveRight()
+            moveLeft()
         } else {
             /* left swipe */
-            moveLeft()
+            moveRight()
         }                       
     } else {
         if ( yDiff > 0 ) {
             /* down swipe */ 
-            moveDown()
+            moveUp()
         } else { 
             /* up swipe */
-            moveUp()
+            moveDown()
         }                                                                 
     }
     /* reset values */
